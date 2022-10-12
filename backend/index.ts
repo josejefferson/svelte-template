@@ -7,7 +7,7 @@ import routes from './routes/index'
 const PORT = env.port || 8888
 
 const app = express()
-if (env.cors) app.use(cors())
+if (env.environment === 'development' || env.cors) app.use(cors())
 app.set('trust proxy', true)
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
