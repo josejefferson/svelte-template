@@ -21,7 +21,7 @@ function serverListen(onlyBackend = false) {
 
 if (env.isNodemon) serverListen(true)
 else {
-  import('../build/handler.js')
+  import('../build/handler.js' as string)
     .then(({ handler }) => {
       app.use(handler)
       serverListen()
