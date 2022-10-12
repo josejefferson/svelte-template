@@ -1,0 +1,50 @@
+{
+  "name": "svelte-kit-app",
+  "version": "0.0.1",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node-esm --experimental-specifier-resolution=node --transpile-only backend/index.ts",
+    "dev": "vite dev",
+    "dev:back": "nodemon",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write ."
+  },
+  "devDependencies": {
+    "@fontsource/fira-mono": "^4.5.0",
+    "@neoconfetti/svelte": "^1.0.0",
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-node": "^1.0.0-next.97",
+    "@sveltejs/kit": "next",
+    "@types/cookie": "^0.5.1",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.14",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "prettier": "^2.6.2",
+    "prettier-plugin-svelte": "^2.7.0",
+    "svelte": "^3.46.0",
+    "svelte-check": "^2.7.1",
+    "svelte-preprocess": "^4.10.6",
+    "ts-node-dev": "^2.0.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "axios": "^1.1.2",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "ts-node": "^10.9.1"
+  }
+}
